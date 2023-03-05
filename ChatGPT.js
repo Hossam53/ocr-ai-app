@@ -1,9 +1,10 @@
 const { Configuration, OpenAIApi } = require("openai");
 import "react-native-url-polyfill/auto";
+import {GPT_KEY} from '@env'
 
 
 const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: GPT_KEY,
 });
 const openai = new OpenAIApi(configuration);
 

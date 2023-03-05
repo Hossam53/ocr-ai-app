@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Button, Image, Linking, StyleSheet, Text, View } from "react-native";
 import generateResponse from "./ChatGPT";
 import ImagePickerComponent from "./ImagePickerComponent";
+import {OCR_KEY} from '@env'
 
-const API_KEY = "AIzaSyAZlAytOH_xGRnCm8hX0asLj0tBKchg_6g";
+const API_KEY = OCR_KEY;
 const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
 
 async function callGoogleVisionAsync(image) {
