@@ -11,7 +11,7 @@ npx install expo
 ```
 3. install all other dependencies
 ```bash
-npx install 
+npm install 
 ```
 4. run expo and follow instructions in the terminal using:
 
