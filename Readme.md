@@ -20,7 +20,7 @@ npx expo start
 ```
 5. Ideally download the app ExpoGo from the app store then scan the QR code
 ## Known issues
-There is an issue with the image library only the camera works now.
+There are not any known issues at the moment
 
 
 
