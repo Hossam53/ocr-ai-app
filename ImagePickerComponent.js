@@ -1,6 +1,7 @@
 import * as ImagePicker from "expo-image-picker";
 import React, { useState, useEffect } from "react";
 import { Button, Image, View, Text } from "react-native";
+import {myGlobalVariable} from "./App";
 
 function ImagePickerComponent({ onSubmit }) {
     const [image, setImage] = useState(null);
@@ -16,6 +17,11 @@ function ImagePickerComponent({ onSubmit }) {
             setText("Loading..");
             const responseData = await onSubmit(result.base64);
             setText(responseData.text);
+            setText("siuu");
+            setText(myGlobalVariable._z.trim()
+
+        );
+
         }
     };
     return (
@@ -33,7 +39,8 @@ function ImagePickerComponent({ onSubmit }) {
                     style={{ width: 400, height: 300, resizeMode: "contain" }}
                 />
             )}
-            <Text>{text}</Text>
+            <Text style={{ color: 'white', textAlign: 'center' }}>{text}</Text>
+
         </View>
     );
 }

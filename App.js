@@ -7,6 +7,7 @@ import {OCR_KEY} from '@env'
 
 const API_KEY = OCR_KEY;
 const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
+export var myGlobalVariable;
 
 async function callGoogleVisionAsync(image) {
   const body = {
@@ -38,7 +39,12 @@ async function callGoogleVisionAsync(image) {
 
   console.log("Result:", parsed);
 
-  return generateResponse(parsed.responses[0].fullTextAnnotation.text)
+
+  console.log("ronaldo"+parsed.responses[0].fullTextAnnotation.text)
+
+  myGlobalVariable  = generateResponse(parsed.responses[0].fullTextAnnotation.text);
+  console.log(myGlobalVariable);
+  return myGlobalVariable;
 }
 
 function VisionScreen() {

@@ -16,7 +16,7 @@ async function generateResponse(prompt) {
     });
     console.log("in");
 
-    //console.log(completion.data.choices[0].text);
+    console.log(completion.data.choices[0].text);
     return completion.data.choices[0].text;
 }
 
